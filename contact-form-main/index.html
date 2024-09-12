@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <form class="card">
+        <h1>Contact Us</h1>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label class="name">First Name *</label>
+            <input
+              type="text"
+              id="firstName"
+              name="name"
+              maxlength="20"
+              size="16px"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="last">Last Name *</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastname"
+              maxlength="20"
+              size="16px"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="email">Email Address *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            maxlength="64"
+            size="16px"
+            required
+          />
+        </div>
+
+        <!-- Please enter a valid email address -->
+
+    <div class="fieldset-row">
+        <fieldset class="input-group2">
+            <label class="chcke1" for="General Enquiry">General Enquiry</label>
+            <input type="radio" id="opç1" name="opç1" />
+        </fieldset>    
+
+        <fieldset class="input-group2">
+            <label for="Support Request">Support Request</label>
+            <input class="check2" type="radio" id="opç2" name="opç2" />
+        </fieldset>
+    </div>
+        <!-- Please select a query type -->
+
+        <p>
+          <label class="msg" aria-required="true">Message *</label>
+          <textarea
+            name="textarea"
+            rows="10"
+            cols="30"
+            maxlength="180"
+            placeholder="type your message"
+            wrap="hard"
+            required
+          ></textarea>
+        </p>
+
+        <input type="checkbox" id="terms" name="terms" />
+        <label class="terms">I consent to being contacted by the team *</label>
+        <!-- To submit this form, please consent to being contacted -->
+
+        <div class="btn">
+          <input class="button" type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
