@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 10px ;
     background-color:  hsl(0, 0%, 100%);
 }
 
+
 body {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +17,7 @@ body {
 }
 
 .container {
+    border-radius: 10px;
     margin: 150px auto;
     width: 50%;
 }
@@ -46,6 +48,7 @@ h1{
 }
 
 .input-group {
+    position: relative;
     flex: 1; 
 }
 
@@ -93,12 +96,69 @@ input[type="email"] {
     color: hsl(187, 24%, 22%)
 }
 
+/* -----------CONFIG ERROR & SUCCESS------------ */
+
+
+/* Estilos de erro */
+.error {
+    color: #DB5A5A;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block; 
+}
+
+/* Estilos de sucesso */
+.success {
+    color:  #4ECA6A;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+.input-group.success input {
+    border: 2px solid #4ECA6A;
+}
+
+.input-group.error input {
+    border:2px solid  #DB5A5A
+}
+
+.query small {
+    visibility: hidden;
+    color: #DB5A5A;
+}
+
+.input-group small {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #DB5A5A;
+}
+
+.input-group.error small{
+    display: block;
+    visibility: visible;
+}
+
+.nameError{
+    font-size: 15px;
+    color: #DB5A5A;
+
+}
+
+.nameErrorHidden {
+    display: none;
+}
+
 /* ----------FIELDSET------------- */
 
 .input-group2 {
     display: flex;
     gap: 10px;
     border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .fieldset-row {
@@ -123,12 +183,13 @@ fieldset {
     font-weight: 400;
     font-family: "Karla", sans-serif;
     color: hsl(187, 24%, 22%);
+    margin-top: 10px;
     margin: 10px;
-    display: block;
-    
+    display: block
 }
 
 textarea {
+    border-radius: 10px;
     margin: 10px 0;
     width: 100%;
     height: 100px;
@@ -138,6 +199,11 @@ textarea {
 }
 
 /* ---------ENDING----------- */
+
+.check {
+    margin-right: 5px;
+}
+
 
 .terms {
     font-family: "Karla", sans-serif;
@@ -168,6 +234,96 @@ textarea {
     padding: 1em;
     background-color: hsl(169, 82%, 27%);
     border: none;
+    border-radius: 10px;
     cursor: pointer;
 }
 
+.attribution {
+    font-family:"Karla", sans-serif;
+    font-size: 16px;
+    background-color: hsl(148, 38%, 91%);
+}
+
+a{
+    background-color: hsl(148, 38%, 91%);
+}
+
+
+/* ---------RESPONSIVO--------- */
+
+@media only screen and (max-width: 826px) and (min-width: 375px) {
+
+    /* -------TOP-------- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 10px ;
+        
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        margin: 100px auto;
+        width: 70%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+       
+    }
+
+    /* ----------FIELDSET------------- */
+
+    .input-group2 {
+        display: flex;
+        gap: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .fieldset-row {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+
+    fieldset {
+        font-family: "Karla", sans-serif;
+        display: block;
+        font-size: 15px;
+        padding: 10px;
+        color: hsl(187, 24%, 22%);
+    }
+
+    /* ------ENDING--------- */
+
+    .permission {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .terms {
+        display: flex;
+        justify-content: center; 
+        font-family: "Karla", sans-serif;
+        color: hsl(187, 24%, 22%);
+        font-size: 15px;
+    }
+
+    .check {
+        margin-right: 5px;
+        width: 10px;
+    }
+
+}

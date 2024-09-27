@@ -36,92 +36,101 @@
   </head>
 
   <body>
-
     <div class="container">
-      <form class="card">
+      <form id="form" class="card">
         <h1>Contact Us</h1>
 
         <div class="input-row">
-          <div class="input-group">
-            <label class="name">First Name *</label>
+          <div class="input-group" >
+            <label for="firstName" class="name" >First Name </label>
             <input
+              class="inputs required"
               type="text"
               id="firstName"
-              name="name"
-              maxlength="20"
-              size="16px"
-              required
-            />
+              name="name"  
+
+            /> 
+            
+            <small>Error message</small> 
           </div>
 
           <div class="input-group">
-            <label class="last">Last Name *</label>
+            <label for="lastName" class="last">Last Name </label>
             <input
               type="text"
               id="lastName"
-              name="lastname"
+              name="lastName"
               maxlength="20"
-              size="16px"
-              required
             />
+            <small>Error message</small>
           </div>
+
+          
         </div>
 
         <div class="input-group">
-          <label class="email">Email Address *</label>
+          <label for="email" class="email">Email Address </label>
           <input
             type="email"
             id="email"
             name="email"
             maxlength="64"
-            size="16px"
-            required
           />
+          <small>Error message</small>
+          
+        </div> 
+
+        <div class="fieldset-row" id="query">
+          <fieldset class="input-group2 input-group">
+            <input type="radio" id="GeneralEnquiry" name="query"  />
+            <label class="chcke1" for="GeneralEnquiry">General Enquiry</label>
+          </fieldset>
+
+          <fieldset class="input-group2 input-group">
+            <input type="radio" id="SupportRequest required" name="query" />
+            <label for="SupportRequest">Support Request</label>
+          </fieldset>
+          <small class="query" id="query-error"></small>
         </div>
 
-        <!-- Please enter a valid email address -->
-
-    <div class="fieldset-row">
-        <fieldset class="input-group2">
-            <label class="chcke1" for="General Enquiry">General Enquiry</label>
-            <input type="radio" id="opç1" name="opç1" />
-        </fieldset>    
-
-        <fieldset class="input-group2">
-            <label for="Support Request">Support Request</label>
-            <input class="check2" type="radio" id="opç2" name="opç2" />
-        </fieldset>
-    </div>
-        <!-- Please select a query type -->
-
         <p>
-          <label class="msg" aria-required="true">Message *</label>
+          <label class="msg required" aria-required="true">Message </label>
           <textarea
             name="textarea"
-            rows="10"
-            cols="30"
             maxlength="180"
             placeholder="type your message"
-            wrap="hard"
             required
-          ></textarea>
+          >
+        </textarea>
         </p>
 
-        <input type="checkbox" id="terms" name="terms" />
-        <label class="terms">I consent to being contacted by the team *</label>
-        <!-- To submit this form, please consent to being contacted -->
+        <div class="permission input-group">
+          <input
+            class="check"
+            type="checkbox"
+            id="terms"
+            name="terms"
+          />
+
+          <label for="terms" class="terms">I consent to being contacted by the team </label>
+          <small>Error message</small>
+        </div>
 
         <div class="btn">
-          <input class="button" type="submit" value="Submit" />
+          <input class="button" type="submit" value="Submit" id="button"/>
         </div>
       </form>
     </div>
-    <!-- Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
 
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/GiuliaFloripes">Giulia floripes</a>.
+      </div>
+    </footer>
   </body>
+
+  <script src="index.js"></script>
 </html>
